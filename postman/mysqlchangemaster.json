@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "648ddcb4-3bff-4828-b6a6-ba7fbaa13ccb",
+		"name": "WareHouseMan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14766691"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create a new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shaun Dong1\",\n    \"username\": \"shaunddd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/user",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shaun Dong1\",\n    \"username\": \"shaundd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/users/ca256a59-34a8-415b-8f3e-827ee85a9a46",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users",
+								"ca256a59-34a8-415b-8f3e-827ee85a9a46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find user by uuid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/users/{{user_id}}",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/users",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/users/{{user_id}}",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"users",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "loalhost:3000",
+			"disabled": true
+		},
+		{
+			"key": "user_uuid",
+			"value": "ca256a59-34a8-415b-8f3e-827ee85a9a46",
+			"disabled": true
+		}
+	]
+}
